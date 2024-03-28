@@ -14,8 +14,8 @@ public class SpringAopApplication {
 		
 		AopClass aopClass = context.getBean(AopClass.class);
 		aopClass.hello();
-		aopClass.printSomething("DevIshtiaq");
-		System.out.println(aopClass.sum(10, 20));
+		aopClass.printSomething("Welcome to Aspect Oriented Programming!");
+		System.out.println(aopClass.sum(100, 200));
 		
 		AnotherClass anotherClass = context.getBean(AnotherClass.class);
 		System.out.println(anotherClass.anotherMethod(10595));
