@@ -8,6 +8,7 @@ public class AnotherClass {
 	public int anotherMethod(int num) {
 
 		return num;
+
 	}
 
 }

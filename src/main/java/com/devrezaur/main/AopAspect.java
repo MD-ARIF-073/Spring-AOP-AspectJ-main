@@ -22,14 +22,15 @@ public class AopAspect {
 		logger.info("**** With parameter - " + Arrays.toString(joinPoint.getArgs()));
 	}
     
-    @After("execution(* AopClass+.*(..))")
-	public void after(JoinPoint joinPoint) {
-		logger.info("**** Finished - " + joinPoint.getSignature().getName());
-	}
+//    @After("execution(* AopClass+.*(..))")
+//	public void after(JoinPoint joinPoint) {
+//		logger.info("**** Finished - " + joinPoint.getSignature().getName());
+//	}
     
   @AfterReturning(value="execution(* AopClass+.*(..))", returning="result")
 	public void after(JoinPoint joinPoint, Object result) {
 		logger.info("**** Finished - " + joinPoint.getSignature().getName());
 		logger.info("**** Returned - " + result);
 	}
+
 }
